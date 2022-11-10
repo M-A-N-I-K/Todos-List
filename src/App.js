@@ -1,11 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar';
 import Todos from './Components/Todos';
 import Footer from './Components/Footer';
 
 function App() {
-  let todos = [{
+
+  let todo = [{
     sNo: 1,
     title: "Go to the market",
     desc: "You need to go to market"
@@ -19,11 +19,14 @@ function App() {
     desc: "You need to go to Gym"
   }
   ]
+  const onDelete = (todo) => {
+    console.log("Called on delete");
+  }
   return (
     <>
       <div className="App">
         <Navbar title="MyTodosList" searchBar={false} />
-        <Todos todos={todos} />
+        <Todos todo={todo} onDelete={onDelete} />
         <Footer />
       </div>
     </>
