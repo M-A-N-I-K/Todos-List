@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar';
 import Todos from './Components/Todos';
 import Footer from './Components/Footer';
 import React, { useState } from 'react'
+import AddToDo from './Components/AddToDo';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
       <div className="App">
         <Navbar title="MyTodosList" searchBar={false} />
         <Todos todos={todos} onDelete={onDelete} />
+        <AddToDo />
         <Footer />
       </div>
     </>
